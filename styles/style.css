@@ -81,7 +81,7 @@ body {
 
 .product-card__composition-list {
   list-style-type: circle;
-  padding-left: 9px;
+  padding-left: 12px;
   flex-grow: 1;
   margin-bottom: 20px;
 }
@@ -93,7 +93,6 @@ body {
 
 li::marker {
   color: #515076;
-  background-image: url('/images/ellipse.png');
 }
 
 
