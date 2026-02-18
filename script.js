@@ -8,7 +8,7 @@ const blueHashColor = '#0a0ac1';
 
 recolorFirstCardButton.addEventListener('click', () => {
   firstProductCard.style.backgroundColor = blueHashColor;
-  console.log('firstProductCard.style')
+  console.log('firstProductCard.style');
 });
 
 // покраска всех карточек
@@ -20,9 +20,7 @@ const recolorAllCardButton = document.getElementById('recolor-all-card-button');
 
 recolorAllCardButton.addEventListener('click', () => {
   productCards.forEach(
-    card => card.style.backgroundColor = greenHashColor
-
-  )
+    card => card.style.backgroundColor = greenHashColor);
 });
 
 // переход на страницу Google
@@ -31,19 +29,19 @@ const googleOpenButton = document.getElementById('open-google-button');
 googleOpenButton.addEventListener('click', openGoogle);
 
 function openGoogle() {
-  const answer = confirm('Вы действительно хотите перейти на сайт Google?')
+  const answer = confirm('Вы действительно хотите перейти на сайт Google?');
 
   if (answer === true) {
     window.open('https://google.com');
   } else {
-    console.log('Пользователь отменил переход на Google')
+    console.log('Пользователь отменил переход на Google');
   }
 };
 
 // вывод содержмиого главного заголовка в консоль
 
 const mainTitle = document.querySelector('div > h1');
-mainTitle.addEventListener('mouseenter',() => {
+mainTitle.addEventListener('mouseenter', () => {
   console.log(mainTitle.textContent);
 });
 
@@ -52,6 +50,5 @@ mainTitle.addEventListener('mouseenter',() => {
 const changeColorButton = document. getElementById('change-color-button');
 changeColorButton.addEventListener('click', () => {
   const yellowHashColor = '#FFFF00';
-  changeColorButton.style.backgroundColor=yellowHashColor;
-  
+  changeColorButton.style.backgroundColor = yellowHashColor;
 });
