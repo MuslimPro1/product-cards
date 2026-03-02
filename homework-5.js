@@ -8,7 +8,7 @@ showWeather("Фергане", 20);
 // И функция которая принимает аргумент для сравнения.
 const LIGHT_SPEED = 299792458;
 
-function checkSpeed(speed) {
+function compareToSpeed(speed) {
   if (speed > LIGHT_SPEED) {
     console.log("Сверхсветовая скорость");
   } else if ( speed < LIGHT_SPEED) {
@@ -17,9 +17,9 @@ function checkSpeed(speed) {
     console.log("Скорость света");
   }
 }
-checkSpeed(10000000000000);
-checkSpeed(10000);
-checkSpeed(299792458);
+compareToSpeed(10000000000000);
+compareToSpeed(10000);
+compareToSpeed(299792458);
 
 // (5): Созданы переменные которые хранят в себе название и цену товара.
 // И функция, которая сравнивает бюджет с ценой товара, с выводом соответствующего бюджету сообщения.
