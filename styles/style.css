@@ -127,3 +127,7 @@ li::marker {
   pointer-events: none;
   background-repeat: no-repeat;
 }
+
+.highlight {
+  background-color: rgb(255, 255, 0) !important;
+}

@@ -27,21 +27,21 @@ console.log(vehicleDetails);
 // (5): Написал функцию которая аргументом принимает объект, описанный в пункте (4).
 //  Она проверяет, есть ли в объекте свойство "максимальная скорость", 
 // если нет - добавляет его и задает значение, если есть - прекращает выполнение (ничего не делает)
-function ensureMaxSpeed(car) {
+function addMaxSpeed(car) {
   if ("maxSpeed" in car) {
     return;
   }
   car.maxSpeed = 300;
 }
-ensureMaxSpeed(vehicleDetails);
+addMaxSpeed(vehicleDetails);
 
 // (6): Написал функцию, которая получает первым аргументом  — объект, 
 // а вторым аргументом — свойство объекта, которое нужно вывести и выводит его значение.
-function getPropertyValue(obj, key) {
+function showPropertyValue(obj, key) {
   console.log(obj[key]);
 }
-getPropertyValue(vehicleDetails, "brand");
-getPropertyValue(vehicleDetails, "maxSpeed");
+showPropertyValue(vehicleDetails, "brand");
+showPropertyValue(vehicleDetails, "maxSpeed");
 
 // (7): Создал массив, который содержит названия продуктов.
 const groceryList = ["Яблоки", "Бананы", "Груши", "Мандарины", "Сок", "Хлеб", "Чай"];

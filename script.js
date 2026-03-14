@@ -50,10 +50,5 @@ mainTitle.addEventListener('mouseenter', () => {
 const changeColorButton = document. getElementById('change-color-button');
 const originalColor = changeColorButton.style.backgroundColor || '';
 changeColorButton.addEventListener('click', () => {
-  const yellowHashColor = 'rgb(255, 255, 0)';
-  if (changeColorButton.style.backgroundColor === yellowHashColor) {
-    changeColorButton.style.backgroundColor = originalColor;
-  } else {
-  changeColorButton.style.backgroundColor = yellowHashColor;
-  }
+changeColorButton.classList.toggle('highlight');
 });
