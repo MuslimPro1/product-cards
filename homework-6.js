@@ -37,11 +37,11 @@ addMaxSpeed(vehicleDetails);
 
 // (6): Написал функцию, которая получает первым аргументом  — объект, 
 // а вторым аргументом — свойство объекта, которое нужно вывести и выводит его значение.
-function showPropertyValue(obj, key) {
+function showObjectProperty(obj, key) {
   console.log(obj[key]);
 }
-showPropertyValue(vehicleDetails, "brand");
-showPropertyValue(vehicleDetails, "maxSpeed");
+showObjectProperty(vehicleDetails, "brand");
+showObjectProperty(vehicleDetails, "maxSpeed");
 
 // (7): Создал массив, который содержит названия продуктов.
 const groceryList = ["Яблоки", "Бананы", "Груши", "Мандарины", "Сок", "Хлеб", "Чай"];
