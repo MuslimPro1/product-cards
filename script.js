@@ -47,8 +47,9 @@ mainTitle.addEventListener('mouseenter', () => {
 
 // Поменять цвет кнопки
 
-const changeColorButton = document. getElementById('change-color-button');
+const changeColorButton = document.getElementById('change-color-button');
+const originalColor = changeColorButton.style.backgroundColor || '';
+
 changeColorButton.addEventListener('click', () => {
-  const yellowHashColor = '#FFFF00';
-  changeColorButton.style.backgroundColor = yellowHashColor;
+  changeColorButton.classList.toggle('highlight');
 });
