@@ -27,7 +27,7 @@ console.log('Перевернутые приборы:', reversedUtensils);
 
 // Уровень 2
 // (7). Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"
-const filteredComments = socialMediaComments.filter(comment => comment.email.endsWith('.com'));
+const filteredComments = socialMediaComments.filter(comment => comment.email.includes('.com'));
 
 console.log(filteredComments);
 
@@ -66,5 +66,8 @@ const emailsByMap = socialMediaComments.map(comment => comment.email);
 console.log(emailsByMap);
 
 // 12. Почитать про методы toString(), join() и перебрав массив с задания №11, привести его к строке.
-const emailString = getEmails.toString();
-const emailStringByJoin = getEmails.join(", ");
+const emailString = emailsByMap.toString();
+const emailStringByJoin = emailsByMap.join(" | ");
+
+console.log(emailString);
+console.log(emailStringByJoin);
