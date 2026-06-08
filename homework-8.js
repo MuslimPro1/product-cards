@@ -42,9 +42,9 @@ console.log(getNameAndDesc(productCards));
 
 const onLoad = () => {
   const numberCards = prompt("Сколько карточек отобразить?");
-  const parsedNumber = parseInt(numberCards);
+  const parsedNumber = Number(numberCards);
 
-  if (!isNaN(parsedNumber) && parsedNumber >= 1 && parsedNumber <= 5) {
+  if (Number.isInteger(parsedNumber) && parsedNumber >= 1 && parsedNumber <= 5) {
     renderProductCards(productCards.slice(0, parsedNumber));
   } else {
     alert("Пожалуйста введите число от 1 до 5");
