@@ -27,11 +27,11 @@ body {
   text-align: center;
 }
 
-.product-list-container {
+.product-card-wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 45px;
   max-width: 1110px;
   width: 100%;
   margin-bottom: 100px;
@@ -94,7 +94,6 @@ body {
 li::marker {
   color: #515076;
 }
-
 
 .product-card__price-wrapper {
   display: flex;
