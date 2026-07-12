@@ -46,11 +46,70 @@
         <div class="background"></div>
       </div>
     </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Каталог</a></li>
+          </ul>
+        </nav>
+        <form id="subscribe-form" class="subscribe-form" novalidate>
+          <label for="subscribe-email">Подпишись на новости:</label>
+          <div>
+            <input type="email" id="subscribe-email" placeholder="Введите ваш email" required>
+            <button type="submit">Подписаться</button>
+          </div>
+        </form>
+      </div>
+    </footer>
+<button id="open-register-modal">Регистрация</button>
+<div class="overlay" id="modal-overlay">
+  <div class="modal">
+    <button class="modal__close" id="close-register-modal">&times;</button>
+    <h2 class="modal__title">Регистрация</h2>
+    
+    <form class="modal__form" id="register-form" novalidate>
+      <div class="form-group">
+        <label for="reg-firstname">Имя:</label>
+        <input type="text" id="reg-firstname" placeholder="Иван" required>
+      </div>
+
+      <div class="form-group">
+        <label for="reg-lastname">Фамилия:</label>
+        <input type="text" id="reg-lastname" placeholder="Иванов" required>
+      </div>
+
+      <div class="form-group">
+        <label for="reg-birthdate">Дата рождения:</label>
+        <input type="date" id="reg-birthdate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="reg-login">Логин:</label>
+        <input type="text" id="reg-login" placeholder="ivan_cool" minlength="4" required>
+      </div>
+
+      <div class="form-group">
+        <label for="reg-password">Пароль:</label>
+        <input type="password" id="reg-password" placeholder="Минимум 6 символов" minlength="6" required>
+      </div>
+
+      <div class="form-group">
+        <label for="reg-password-confirm">Повторите пароль:</label>
+        <input type="password" id="reg-password-confirm" placeholder="Повторите пароль" required>
+      </div>
+
+      <button type="submit" class="modal__submit-btn">Зарегистрироваться</button>
+    </form>
+  </div>
+</div>
     <script src="./script.js"></script>
     <script src="./homework-5.js"></script>
     <script src="./homework-6.js"></script>
     <script src="./homework-7.js" type="module"></script>
     <script src="./homework-8.js" type="module"></script>
     <script src="./product-cards.js" type="module"></script>
+    <script src="./homework-9.js" type="module"></script>
   </body>
 </html>
