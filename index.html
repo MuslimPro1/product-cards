@@ -5,26 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>product-card</title>
   </head>
-
   <body>
+    <button id="open-register-modal" class="register-btn-top">Регистрация</button>
     <div class="page">
       <h1 class="main-title">Выбери свой продукт</h1>
-      <button id="recolor-first-card-button">
-        Перекрасить фон первой карточки
-      </button>
-      <button id="recolor-all-card-button">
-        Перекрасить фон всех карточек
-      </button>
+      <button id="recolor-first-card-button">Перекрасить фон первой карточки</button>
+      <button id="recolor-all-card-button">Перекрасить фон всех карточек</button>
       <button id="open-google-button">Открыть Google</button>
       <button id="change-color-button">Поменять цвет кнопки</button>
-
       <div class="product-card-wrapper">
         <template class="product-card-temlate">
           <div class="product-card">
@@ -38,7 +30,7 @@
               <span class="product-card__price-text">Цена</span>
               <div>
                 <span class="product-card__price">;</span>
-                <span class="product-card__price-val">&#8381;</span>
+                <span class="product-card__price-val">₽</span>
               </div>
             </div>
           </div>
@@ -46,64 +38,76 @@
         <div class="background"></div>
       </div>
     </div>
-    <footer class="footer">
+    <footer class="site-footer">
       <div class="footer-container">
-        <nav class="footer-nav">
-          <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-          </ul>
-        </nav>
-        <form id="subscribe-form" class="subscribe-form" novalidate>
-          <label for="subscribe-email">Подпишись на новости:</label>
-          <div>
-            <input type="email" id="subscribe-email" placeholder="Введите ваш email" required>
-            <button type="submit">Подписаться</button>
+        <div class="footer-column footer-brand">
+          <h3 class="footer-logo">Product Cards</h3>
+          <p class="footer-text">У нас лучшие продукты для кожи!</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Telegram">
+              <img src="images/tg-icon.png" alt="Telegram" class="social-icon" />
+            </a>
+            <a href="#" class="social-link" aria-label="VK">
+              <img src="images/vk-icon.png" alt="VK" class="social-icon" />
+            </a>
           </div>
-        </form>
+        </div>
+        <div class="footer-column footer-subscribe">
+          <h4 class="column-title">Узнавайте о наших акциях первыми:</h4>
+          <form class="subscribe-form" id="subscribe-form" action="#" method="POST">
+            <input type="email" id="subscribe-email" placeholder="Введи Email..." required class="subscribe-input" />
+            <button type="submit" class="subscribe-btn">Подписаться</button>
+          </form>
+        </div>
+        <div class="footer-column footer-links">
+          <div class="footer-links-wrapper">
+            <h4 class="column-title">Быстрые ссылки</h4>
+            <nav class="footer-nav">
+              <a href="#">Главная</a>
+              <a href="#">Магазин</a>
+              <a href="#">Контакты</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <hr class="footer-bottom__divider" />
+        <p>&copy; 2026 product-cards.com. All rights reserved.</p>
       </div>
     </footer>
-<button id="open-register-modal">Регистрация</button>
-<div class="overlay" id="modal-overlay">
-  <div class="modal">
-    <button class="modal__close" id="close-register-modal">&times;</button>
-    <h2 class="modal__title">Регистрация</h2>
-    
-    <form class="modal__form" id="register-form" novalidate>
-      <div class="form-group">
-        <label for="reg-firstname">Имя:</label>
-        <input type="text" id="reg-firstname" placeholder="Иван" required>
+    <div class="overlay" id="modal-overlay">
+      <div class="modal">
+        <button class="modal__close" id="close-register-modal">&times;</button>
+        <h2 class="modal__title">Регистрация</h2>
+        <form class="modal__form" id="register-form" novalidate>
+          <div class="form-group">
+            <label for="reg-firstname">Имя:</label>
+            <input type="text" id="reg-firstname" placeholder="Иван" required />
+          </div>
+          <div class="form-group">
+            <label for="reg-lastname">Фамилия:</label>
+            <input type="text" id="reg-lastname" placeholder="Иванов" required />
+          </div>
+          <div class="form-group">
+            <label for="reg-birthdate">Дата рождения:</label>
+            <input type="date" id="reg-birthdate" required />
+          </div>
+          <div class="form-group">
+            <label for="reg-login">Логин:</label>
+            <input type="text" id="reg-login" placeholder="ivan_cool" minlength="4" required />
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Пароль:</label>
+            <input type="password" id="reg-password" placeholder="Минимум 6 символов" minlength="6" required />
+          </div>
+          <div class="form-group">
+            <label for="reg-password-confirm">Повторите пароль:</label>
+            <input type="password" id="reg-password-confirm" placeholder="Повторите пароль" required />
+          </div>
+          <button type="submit" class="modal__submit-btn">Зарегистрироваться</button>
+        </form>
       </div>
-
-      <div class="form-group">
-        <label for="reg-lastname">Фамилия:</label>
-        <input type="text" id="reg-lastname" placeholder="Иванов" required>
-      </div>
-
-      <div class="form-group">
-        <label for="reg-birthdate">Дата рождения:</label>
-        <input type="date" id="reg-birthdate" required>
-      </div>
-
-      <div class="form-group">
-        <label for="reg-login">Логин:</label>
-        <input type="text" id="reg-login" placeholder="ivan_cool" minlength="4" required>
-      </div>
-
-      <div class="form-group">
-        <label for="reg-password">Пароль:</label>
-        <input type="password" id="reg-password" placeholder="Минимум 6 символов" minlength="6" required>
-      </div>
-
-      <div class="form-group">
-        <label for="reg-password-confirm">Повторите пароль:</label>
-        <input type="password" id="reg-password-confirm" placeholder="Повторите пароль" required>
-      </div>
-
-      <button type="submit" class="modal__submit-btn">Зарегистрироваться</button>
-    </form>
-  </div>
-</div>
+    </div>
     <script src="./script.js"></script>
     <script src="./homework-5.js"></script>
     <script src="./homework-6.js"></script>

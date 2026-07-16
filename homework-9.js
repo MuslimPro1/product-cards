@@ -1,17 +1,15 @@
 const myForm = document.getElementById('subscribe-form');
 const myEmail = document.getElementById('subscribe-email');
 
-myForm.addEventListener('submit' , function(event) {
+myForm.addEventListener('submit', function(event) {
   event.preventDefault();
-
-  if (!myEmail.checkVisibility()) {
+  if (!myEmail.checkValidity()) {
     alert('Пожалуйста, введите корректный email!');
     return;
   }
   const data = {
     email: myEmail.value
   };
-
   console.log(data);
 });
 
@@ -44,29 +42,21 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
-
 let user = null;
-
 const registerForm = document.getElementById('register-form');
 const passwordInput = document.getElementById('reg-password');
 const confirmPasswordInput = document.getElementById('reg-password-confirm');
 
 registerForm.addEventListener('submit', function(event) {
   event.preventDefault();
-
-
   if (!registerForm.checkValidity()) {
     alert('Регистрация отклонена. Пожалуйста, заполните все поля корректно.');
     return;
   }
-
-
   if (passwordInput.value !== confirmPasswordInput.value) {
     alert('Регистрация отклонена. Пароли не совпадают!');
     return;
   }
-
-
   user = {
     firstname: document.getElementById('reg-firstname').value,
     lastname: document.getElementById('reg-lastname').value,
@@ -75,10 +65,7 @@ registerForm.addEventListener('submit', function(event) {
     password: passwordInput.value,
     createdOn: new Date()
   };
-
-
   console.log('Пользователь успешно зарегистрирован:', user);
-
   registerForm.reset();
   closeModal();
 });
