@@ -6,6 +6,10 @@ export class Modal {
     if (this.closeBtn) {
       this.closeBtn.addEventListener('click', this.close.bind(this));
     }
+
+    if (this.modal) {
+      this.modal.addEventListener('click', this.handleOverlayClick.bind(this));
+    }
   }
 
   open() {
@@ -20,5 +24,11 @@ export class Modal {
 
   isOpen() {
     return this.modal.classList.contains('modal-showed');
+  }
+
+  handleOverlayClick(event) {
+    if (event.target === event.currentTarget) {
+      this.close();
+    }
   }
 }

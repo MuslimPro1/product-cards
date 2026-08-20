@@ -1,4 +1,4 @@
-import { Modal } from './Modal.js';
+import { Modal } from './homework-12/Modal.js';
 import { Form } from './Form.js';
 
 class Device {
@@ -46,12 +46,6 @@ const changeColorBtn = document.getElementById('change-color-button');
 
 openModalBtn.addEventListener('click', () => {
   registerModal.open();
-});
-
-modalOverlay.addEventListener('click', (event) => {
-  if (event.target === modalOverlay) {
-    registerModal.close();
-  }
 });
 
 document.addEventListener('keydown', (event) => {
